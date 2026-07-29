@@ -1682,4 +1682,5 @@ async def botconfig(i: discord.Interaction):
     c = get_config(i.guild.id)
     await i.response.send_message(embed=embed_config(c, i.guild), view=BotView(c, i.guild.id))
 
-bot.run("SEU_TOKEN_AQUI")
+TOKEN = os.getenv("DISCORD_TOKEN")
+bot.run(TOKEN)
